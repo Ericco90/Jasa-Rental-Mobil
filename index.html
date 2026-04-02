@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentalMobil - Sewa Mobil Berkualitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus+Jakarta+Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .orange-gradient {
+            background: linear-gradient(135deg, #ff8c00 0%, #ff5e00 100%);
+        }
+
+        .hero-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .hero-wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+
+        .hero-wave .shape-fill {
+            fill: #ffffff;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .glass-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div class="bg-orange-500 p-2 rounded-lg">
+                        <i data-lucide="car" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-blue-900">Rental<span
+                            class="text-orange-500">Mobil</span></span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 text-slate-600 font-medium">
+                    <a href="#" class="hover:text-orange-500 transition-colors">Beranda</a>
+                    <a href="#features" class="hover:text-orange-500 transition-colors">Tentang Kami</a>
+                    <a href="#services" class="hover:text-orange-500 transition-colors">Layanan</a>
+                    <a href="#fleet" class="hover:text-orange-500 transition-colors">Armada</a>
+                </div>
+
+                <div class="flex items-center">
+                    <button>
+                        <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                            class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
+                            Hubungi Kami
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden bg-gradient-to-r from-blue-950 via-blue-900 to-slate-100">
+
+        <div class="max-w-7xl mx-auto px-6 py-28 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+
+            <!-- LEFT CONTENT -->
+            <div class="text-white z-10">
+
+                <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    Sewa Mobil Nyaman<br>
+                    <span class="text-orange-500">Langsung Booking via WhatsApp</span>
+                </h1>
+
+                <p class="text-lg text-slate-300 mb-8 max-w-lg">
+                    Armada lengkap, driver profesional, siap antar jemput.
+                    Proses cepat tanpa ribet.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-6">
+
+                    <!-- CTA -->
+                    <a href="https://wa.me/6285641612901"
+                        class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg inline-block mb-4">
+                        🚀 Booking Sekarang via WhatsApp
+                    </a>
+
+                    <div class="text-sm text-slate-300">
+                        ⭐ 4.9/5 dari 120+ pelanggan • ✔ Tanpa biaya tersembunyi
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="relative h-[420px] lg:h-[470px] overflow-hidden rounded-l-[60px]">
+
+                <!-- BACKGROUND -->
+                <img src="image/hero.webp" class="absolute inset-0 w-full h-full object-cover z-0">
+
+                <!-- OVERLAY -->
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900/60 to-transparent z-10"></div>
+
+                <img src="image/inova.png"
+                    class="absolute bottom-0 left-1/3 -translate-x-1/2 w-[75%] object-contain z-20">
+
+            </div>
+        </div>
+
+        <!-- WAVE -->
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V120c67.81-23.09,144.29-30.71,214.34-3C284.34,121.14,321.39,56.44,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+    </section>
+    <section class="py-10 bg-white text-center">
+        <div class="flex flex-wrap justify-center gap-8 text-slate-600 font-semibold">
+            <span>✔ 100+ Customer Puas</span>
+            <span>✔ 24 Jam Layanan</span>
+            <span>✔ Driver Profesional</span>
+            <span>✔ Unit Bersih & Terawat</span>
+        </div>
+    </section>
+    <!-- FEATURES SECTION -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-blue-900 mb-4">Mengapa Memilih Kami?</h2>
+                <div class="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div
+                    class="p-8 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+                        <i data-lucide="shield-check" class="text-orange-500 group-hover:text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Asuransi Lengkap</h3>
+                    <p class="text-slate-600 leading-relaxed">Perjalanan aman dengan perlindungan asuransi menyeluruh
+                        untuk setiap penyewaan.</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div
+                    class="p-8 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+                        <i data-lucide="clock" class="text-orange-500 group-hover:text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Layanan 24 Jam</h3>
+                    <p class="text-slate-600 leading-relaxed">Tim dukungan kami siap membantu kebutuhan Anda kapanpun,
+                        siang maupun malam.</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div
+                    class="p-8 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+                        <i data-lucide="map-pin" class="text-orange-500 group-hover:text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Antar Jemput</h3>
+                    <p class="text-slate-600 leading-relaxed">Kami siap antar jemput unit ke Bandara, Stasiun, atau
+                        lokasi pilihan Anda.</p>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div
+                    class="p-8 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+                        <i data-lucide="tag" class="text-orange-500 group-hover:text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Harga Terbaik</h3>
+                    <p class="text-slate-600 leading-relaxed">Harga kompetitif dengan transparansi biaya, tanpa ada
+                        biaya tersembunyi.</p>
+                </div>
+
+                <!-- Feature Card 5 -->
+                <div
+                    class="p-8 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+                        <i data-lucide="sparkles" class="text-orange-500 group-hover:text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Unit Bersih</h3>
+                    <p class="text-slate-600 leading-relaxed">Setiap unit kami pastikan dalam keadaan bersih, harum, dan
+                        terawat dengan baik.</p>
+                </div>
+
+                <!-- Feature Card 6 -->
+                <div
+                    class="p-8 bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+                        <i data-lucide="user-check" class="text-orange-500 group-hover:text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Driver Profesional</h3>
+                    <p class="text-slate-600 leading-relaxed">Driver kami terlatih secara profesional, ramah, dan
+                        menguasai berbagai rute jalan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- TITLE -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-blue-900 mb-4">
+                    Layanan Kami
+                </h2>
+                <p class="text-slate-600">
+                    Pilih layanan sesuai kebutuhan perjalanan Anda
+                </p>
+            </div>
+
+            <!-- GRID -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Layanan 1 -->
+                <div class="p-8 bg-slate-50 rounded-3xl border hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Sewa Harian</h3>
+                    <p class="text-slate-600 mb-6">
+                        Cocok untuk perjalanan singkat, liburan, atau keperluan pribadi.
+                    </p><a
+                        href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20sewa%20mobil%20harian%20untuk%20hari%20ini.%20Bisa%20info%20unit%20dan%20harganya?"
+                        class="text-orange-500 font-bold hover:underline">
+                        Booking Sekarang →
+                    </a>
+                </div>
+
+                <!-- Layanan 2 -->
+                <div class="p-8 bg-slate-50 rounded-3xl border hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Sewa Bulanan</h3>
+                    <p class="text-slate-600 mb-6">
+                        Lebih hemat untuk kebutuhan jangka panjang dan operasional bisnis.
+                    </p>
+                    <a href="https://wa.me/6285641612901?text=Halo%20saya%20tertarik%20sewa%20mobil%20bulanan.%20Mohon%20info%20paket%20dan%20harganya."
+                        class="text-orange-500 font-bold hover:underline">
+                        Booking Sekarang →
+                    </a>
+                </div>
+
+                <!-- Layanan 3 -->
+                <div class="p-8 bg-slate-50 rounded-3xl border hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Dengan Driver</h3>
+                    <p class="text-slate-600 mb-6">
+                        Nikmati perjalanan santai tanpa perlu menyetir, driver profesional siap membantu.
+                    </p>
+                    <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20dengan%20driver.%20Apakah%20tersedia%20hari%20ini?"
+                        class="text-orange-500 font-bold hover:underline">
+                        Booking Sekarang →
+                    </a>
+                </div>
+
+                <!-- Layanan 4 -->
+                <div class="p-8 bg-slate-50 rounded-3xl border hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Lepas Kunci</h3>
+                    <p class="text-slate-600 mb-6">
+                        Bebas berkendara sendiri dengan syarat mudah dan proses cepat.
+                    </p>
+                    <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20sewa%20mobil%20lepas%20kunci.%20Apa%20saja%20syaratnya?"
+                        class="text-orange-500 font-bold hover:underline">
+                        Booking Sekarang →
+                    </a>
+                </div>
+
+                <!-- Layanan 5 -->
+                <div class="p-8 bg-slate-50 rounded-3xl border hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Antar Jemput</h3>
+                    <p class="text-slate-600 mb-6">
+                        Layanan antar jemput bandara, stasiun, hotel, atau lokasi Anda.
+                    </p>
+                    <a href="https://wa.me/6285641612901?text=Halo%20saya%20butuh%20layanan%20antar%20jemput.%20Bisa%20dari%20lokasi%20saya?"
+                        class="text-orange-500 font-bold hover:underline">
+                        Booking Sekarang →
+                    </a>
+                </div>
+
+                <!-- Layanan 6 -->
+                <div class="p-8 bg-slate-50 rounded-3xl border hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Sewa Event</h3>
+                    <p class="text-slate-600 mb-6">
+                        Untuk pernikahan, acara kantor, atau kebutuhan khusus lainnya.
+                    </p>
+                    <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20untuk%20acara.%20Mohon%20info%20ketersediaan%20dan%20harga."
+                        class="text-orange-500 font-bold hover:underline">
+                        Booking Sekarang →
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CAR LIST SECTION -->
+    <section id="fleet" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-blue-900 mb-4">Armada Mobil Kami</h2>
+                    <p class="text-slate-600">Pilih armada yang sesuai dengan kebutuhan perjalanan Anda.</p>
+                </div>
+                <a href="#" class="text-orange-500 font-bold hover:underline flex items-center gap-2">
+                    Lihat Semua Armada <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Car Card 1 -->
+                <div
+                    class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="image/avanza.jpg" alt="Toyota Avanza" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            TERPOPULER</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">Toyota Avanza</h3>
+                        <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 7
+                                Kursi</span>
+                            <span class="flex items-center gap-1"><i data-lucide="settings" class="w-4 h-4"></i>
+                                Manual</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-100">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                                <p class="text-xl font-extrabold text-blue-900">Rp 400.000<span
+                                        class="text-sm font-normal text-slate-500">/hari</span></p>
+                            </div>
+                            <button>
+                                <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
+                                    Booking WA
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div
+                    class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="image/mobilio.webp" alt="Honda Mobilio" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">Honda Mobilio</h3>
+                        <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 7
+                                Kursi</span>
+                            <span class="flex items-center gap-1"><i data-lucide="settings" class="w-4 h-4"></i>
+                                Matic</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-100">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                                <p class="text-xl font-extrabold text-blue-900">Rp 450.000<span
+                                        class="text-sm font-normal text-slate-500">/hari</span></p>
+                            </div>
+                            <button>
+                                <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
+                                    Booking WA
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div
+                    class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="image/mobilio.webp" alt="Honda Mobilio" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">Honda Mobilio</h3>
+                        <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 7
+                                Kursi</span>
+                            <span class="flex items-center gap-1"><i data-lucide="settings" class="w-4 h-4"></i>
+                                Matic</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-100">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                                <p class="text-xl font-extrabold text-blue-900">Rp 450.000<span
+                                        class="text-sm font-normal text-slate-500">/hari</span></p>
+                            </div>
+                            <button>
+                                <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
+                                    Booking WA
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div
+                    class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="image/mobilio.webp" alt="Honda Mobilio" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">Honda Mobilio</h3>
+                        <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 7
+                                Kursi</span>
+                            <span class="flex items-center gap-1"><i data-lucide="settings" class="w-4 h-4"></i>
+                                Matic</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-100">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                                <p class="text-xl font-extrabold text-blue-900">Rp 450.000<span
+                                        class="text-sm font-normal text-slate-500">/hari</span></p>
+                            </div>
+                            <button>
+                                <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
+                                    Booking WA
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div
+                    class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="image/mobilio.webp" alt="Honda Mobilio" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">Honda Mobilio</h3>
+                        <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 7
+                                Kursi</span>
+                            <span class="flex items-center gap-1"><i data-lucide="settings" class="w-4 h-4"></i>
+                                Matic</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-100">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                                <p class="text-xl font-extrabold text-blue-900">Rp 450.000<span
+                                        class="text-sm font-normal text-slate-500">/hari</span></p>
+                            </div>
+                            <button>
+                                <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
+                                    Booking WA
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 3 -->
+                <div
+                    class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300">
+                    <div class="h-56 bg-slate-200 relative overflow-hidden">
+                        <img src="image/inova.png" alt="Toyota Innova" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            PREMIUM</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-2">Toyota Innova</h3>
+                        <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                            <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4"></i> 7
+                                Kursi</span>
+                            <span class="flex items-center gap-1"><i data-lucide="settings" class="w-4 h-4"></i>
+                                Matic</span>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-100">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                                <p class="text-xl font-extrabold text-blue-900">Rp 750.000<span
+                                        class="text-sm font-normal text-slate-500">/hari</span></p>
+                            </div>
+                            <button>
+                                <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
+                                    Booking WA
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white text-center">
+        <h2 class="text-3xl font-extrabold mb-12 text-blue-900">Pilih Paket Sewa</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+            <div class="border p-6 rounded-2xl">
+                <h3 class="font-bold text-xl mb-2">Harian</h3>
+                <p class="text-slate-500 mb-4">Mulai dari</p>
+                <p class="text-2xl font-extrabold text-orange-500 mb-4">Rp 400K</p>
+                <a href="https://wa.me/6285641612901" class="bg-green-500 text-white px-4 py-2 rounded-lg">Pesan</a>
+            </div>
+
+            <div class="border p-6 rounded-2xl bg-orange-50 scale-105">
+                <h3 class="font-bold text-xl mb-2">Mingguan</h3>
+                <p class="text-2xl font-extrabold text-orange-500 mb-4">Lebih Hemat</p>
+                <a href="https://wa.me/6285641612901" class="bg-green-500 text-white px-4 py-2 rounded-lg">Pesan</a>
+            </div>
+
+            <div class="border p-6 rounded-2xl">
+                <h3 class="font-bold text-xl mb-2">Bulanan</h3>
+                <p class="text-2xl font-extrabold text-orange-500 mb-4">Diskon Besar</p>
+                <a href="https://wa.me/6285641612901" class="bg-green-500 text-white px-4 py-2 rounded-lg">Pesan</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL + CTA -->
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <!-- Testimonials -->
+                <div class="flex-1 space-y-8">
+                    <div class="mb-10">
+                        <span class="text-orange-500 font-bold tracking-widest uppercase text-sm">Testimoni</span>
+                        <h2 class="text-4xl font-extrabold text-blue-900 mt-2">Apa Kata Pelanggan?</h2>
+                    </div>
+
+                    <!-- Testimonial 1 -->
+                    <div class="flex gap-6 p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                            alt="Avatar"
+                            class="w-16 h-16 rounded-full object-cover shadow-lg border-2 border-white shrink-0">
+                        <div>
+                            <div class="flex text-orange-500 mb-2">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-slate-600 italic mb-4">"Pelayanan sangat memuaskan, mobil sangat bersih dan
+                                performa oke. Driver sangat ramah dan sabar."</p>
+                            <p class="font-bold text-blue-900">Budi Santoso</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="flex gap-6 p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
+                            alt="Avatar"
+                            class="w-16 h-16 rounded-full object-cover shadow-lg border-2 border-white shrink-0">
+                        <div>
+                            <div class="flex text-orange-500 mb-2">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-slate-600 italic mb-4">"Harga paling transparan di kota ini. Proses booking
+                                via WhatsApp sangat cepat. Sangat direkomendasikan!"</p>
+                            <p class="font-bold text-blue-900">Siska Putri</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Box -->
+                <div class="flex-1 w-full">
+                    <div
+                        class="bg-blue-900 rounded-[3rem] p-12 text-white relative overflow-hidden shadow-2xl shadow-blue-900/40">
+                        <!-- Decorative Circle -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+                        <div class="relative z-10 text-center">
+                            <h3 class="text-3xl font-extrabold mb-6">Siap Untuk Berangkat?</h3>
+                            <p class="text-blue-100 mb-10 text-lg">Hubungi customer service kami sekarang dan dapatkan
+                                penawaran khusus hari ini!</p>
+
+                            <a href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                                class="w-full orange-gradient text-white py-5 rounded-2xl font-black text-xl hover:shadow-2xl hover:shadow-orange-500/40 transition-all flex items-center justify-center gap-3">
+
+                                <i data-lucide="message-square" class="w-6 h-6"></i>
+                                HUBUNGI KAMI
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-orange-500 text-center text-white">
+        <h2 class="text-4xl font-extrabold mb-6">
+            Siap Sewa Mobil Hari Ini?
+        </h2>
+
+        <p class="mb-8 text-lg">
+            Klik tombol di bawah untuk langsung booking via WhatsApp
+        </p>
+
+        <a href="https://wa.me/6285641612901" class="bg-white text-orange-500 px-8 py-4 rounded-full font-bold text-lg">
+            🚀 Booking Sekarang
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 pt-20 pb-10 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-orange-500 p-2 rounded-lg">
+                            <i data-lucide="car" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">RentalMobil</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">Layanan penyewaan mobil terpercaya dengan armada terbaru dan
+                        pelayanan driver profesional.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i
+                                data-lucide="https://facebook.com/ericco.baladewa" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i
+                                data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Perusahaan</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Karir</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Kontak</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Layanan</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Sewa Harian</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Sewa Bulanan</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Sewa Korporat</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Antar Jemput Bandara</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Kontak Kami</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-orange-500 shrink-0"></i>
+                            <span>Jl. Raya Kemang No. 123, Jakarta Selatan, 12730</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-orange-500 shrink-0"></i>
+                            <span>info@rentalmobil.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-orange-500 shrink-0"></i>
+                            <span>Buka 24 Jam (Setiap Hari)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs">
+                <p>&copy; 2024 RentalMobil Indonesia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6285641612901?text=Halo%20saya%20mau%20sewa%20mobil"
+        class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition active:scale-95 group">
+
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+
+        <span
+            class="absolute right-20 bg-white text-slate-800 px-4 py-2 rounded-lg text-sm font-bold shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-300">
+            Booking Sekarang
+        </span>
+
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Basic scroll effect for Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg', 'h-16');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.remove('shadow-lg', 'h-16');
+                nav.classList.add('h-20');
+            }
+        });
+    </script>
+</body>
+
+</html>
