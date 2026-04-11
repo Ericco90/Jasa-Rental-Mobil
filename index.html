@@ -312,11 +312,13 @@
       </style>
 
       <div
-        class="w-full px-6 pt-5 pb-20 grid grid-cols-1 lg:grid-cols-2 items-start"
+        class="w-full px-4 sm:px-6 pt-5 pb-16 sm:pb-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
       >
         <!-- LEFT -->
         <div class="text-white z-10 mt-8 lg:mt-14">
-          <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6"
+          >
             Sewa Mobil Nyaman<br />
             <span class="text-orange-500">Langsung Booking via WhatsApp</span>
           </h1>
@@ -335,10 +337,10 @@
         </div>
 
         <!-- RIGHT -->
-        <div class="relative h-[500px] lg:h-[550px]">
+        <div class="relative h-[420px] sm:h-[500px] lg:h-[550px]">
           <!-- ✅ BACKGROUND FULL -->
           <img
-            src="hero2.webp"
+            src="image/hero2.webp"
             class="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-100"
           />
 
@@ -348,18 +350,20 @@
           ></div>
 
           <!-- GLOW -->
-          <div class="glow-bg glow-anim"></div>
+          <div class="hidden sm:block glow-bg glow-anim"></div>
 
           <!-- ðŸš— MOBIL (ANIMASI) -->
           <img
-            src="inova.png"
-            class="absolute bottom-0 right-0 w-[80%] z-30 drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)] anim-mobil"
+            src="image/inova.png"
+            class="hidden sm:block absolute bottom-0 right-0 w-[80%] z-30 drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)] anim-mobil"
           />
 
           <!-- FORM -->
-          <div class="absolute top-[80%] right-[3%] z-50 w-[380px]">
+          <div
+            class="absolute bottom-4 left-1/2 -translate-x-1/2 sm:translate-x-0 z-50 w-[92%] max-w-[380px] sm:w-[380px] sm:left-auto sm:right-[3%] sm:top-[72%] sm:bottom-auto"
+          >
             <div class="bg-black/80 backdrop-blur-md p-4 rounded-xl shadow-xl">
-              <div class="grid grid-cols-2 gap-2 mb-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
                 <select id="kota" class="p-2 rounded bg-white text-sm">
                   <option value="">Pilih Kota</option>
                   <option value="Bandung">Bandung</option>
@@ -685,7 +689,7 @@
           >
             <div class="h-56 bg-slate-200 relative overflow-hidden">
               <img
-                src="avanza.jpg"
+                src="image/avanza.jpg"
                 alt="Toyota Avanza"
                 class="w-full h-full object-cover"
               />
@@ -736,7 +740,145 @@
           >
             <div class="h-56 bg-slate-200 relative overflow-hidden">
               <img
-                src="mobilio.webp"
+                src="image/mobilio.webp"
+                alt="Honda Mobilio"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-blue-900 mb-2">
+                Honda Mobilio
+              </h3>
+              <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                <span class="flex items-center gap-1"
+                  ><i data-lucide="users" class="w-4 h-4"></i> 7 Kursi</span
+                >
+                <span class="flex items-center gap-1"
+                  ><i data-lucide="settings" class="w-4 h-4"></i> Matic</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-6 border-t border-slate-100"
+              >
+                <div>
+                  <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                  <p class="text-xl font-extrabold text-blue-900">
+                    Rp 450.000<span class="text-sm font-normal text-slate-500"
+                      >/hari</span
+                    >
+                  </p>
+                </div>
+                <button>
+                  <a
+                    href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
+                  >
+                    Booking WA
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car Card 2 -->
+          <div
+            class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300"
+          >
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img
+                src="image/mobilio.webp"
+                alt="Honda Mobilio"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-blue-900 mb-2">
+                Honda Mobilio
+              </h3>
+              <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                <span class="flex items-center gap-1"
+                  ><i data-lucide="users" class="w-4 h-4"></i> 7 Kursi</span
+                >
+                <span class="flex items-center gap-1"
+                  ><i data-lucide="settings" class="w-4 h-4"></i> Matic</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-6 border-t border-slate-100"
+              >
+                <div>
+                  <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                  <p class="text-xl font-extrabold text-blue-900">
+                    Rp 450.000<span class="text-sm font-normal text-slate-500"
+                      >/hari</span
+                    >
+                  </p>
+                </div>
+                <button>
+                  <a
+                    href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
+                  >
+                    Booking WA
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car Card 2 -->
+          <div
+            class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300"
+          >
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img
+                src="image/mobilio.webp"
+                alt="Honda Mobilio"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-blue-900 mb-2">
+                Honda Mobilio
+              </h3>
+              <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
+                <span class="flex items-center gap-1"
+                  ><i data-lucide="users" class="w-4 h-4"></i> 7 Kursi</span
+                >
+                <span class="flex items-center gap-1"
+                  ><i data-lucide="settings" class="w-4 h-4"></i> Matic</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-6 border-t border-slate-100"
+              >
+                <div>
+                  <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
+                  <p class="text-xl font-extrabold text-blue-900">
+                    Rp 450.000<span class="text-sm font-normal text-slate-500"
+                      >/hari</span
+                    >
+                  </p>
+                </div>
+                <button>
+                  <a
+                    href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
+                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
+                  >
+                    Booking WA
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car Card 2 -->
+          <div
+            class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300"
+          >
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img
+                src="image/mobilio.webp"
                 alt="Honda Mobilio"
                 class="w-full h-full object-cover"
               />
@@ -782,145 +924,7 @@
           >
             <div class="h-56 bg-slate-200 relative overflow-hidden">
               <img
-                src="mobilio.webp"
-                alt="Honda Mobilio"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-blue-900 mb-2">
-                Honda Mobilio
-              </h3>
-              <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
-                <span class="flex items-center gap-1"
-                  ><i data-lucide="users" class="w-4 h-4"></i> 7 Kursi</span
-                >
-                <span class="flex items-center gap-1"
-                  ><i data-lucide="settings" class="w-4 h-4"></i> Matic</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between pt-6 border-t border-slate-100"
-              >
-                <div>
-                  <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
-                  <p class="text-xl font-extrabold text-blue-900">
-                    Rp 450.000<span class="text-sm font-normal text-slate-500"
-                      >/hari</span
-                    >
-                  </p>
-                </div>
-                <button>
-                  <a
-                    href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
-                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
-                  >
-                    Booking WA
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Car Card 4 -->
-          <div
-            class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300"
-          >
-            <div class="h-56 bg-slate-200 relative overflow-hidden">
-              <img
-                src="mobilio.webp"
-                alt="Honda Mobilio"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-blue-900 mb-2">
-                Honda Mobilio
-              </h3>
-              <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
-                <span class="flex items-center gap-1"
-                  ><i data-lucide="users" class="w-4 h-4"></i> 7 Kursi</span
-                >
-                <span class="flex items-center gap-1"
-                  ><i data-lucide="settings" class="w-4 h-4"></i> Matic</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between pt-6 border-t border-slate-100"
-              >
-                <div>
-                  <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
-                  <p class="text-xl font-extrabold text-blue-900">
-                    Rp 450.000<span class="text-sm font-normal text-slate-500"
-                      >/hari</span
-                    >
-                  </p>
-                </div>
-                <button>
-                  <a
-                    href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
-                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
-                  >
-                    Booking WA
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Car Card 5 -->
-          <div
-            class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300"
-          >
-            <div class="h-56 bg-slate-200 relative overflow-hidden">
-              <img
-                src="mobilio.webp"
-                alt="Honda Mobilio"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-blue-900 mb-2">
-                Honda Mobilio
-              </h3>
-              <div class="flex items-center gap-4 text-slate-500 text-sm mb-6">
-                <span class="flex items-center gap-1"
-                  ><i data-lucide="users" class="w-4 h-4"></i> 7 Kursi</span
-                >
-                <span class="flex items-center gap-1"
-                  ><i data-lucide="settings" class="w-4 h-4"></i> Matic</span
-                >
-              </div>
-              <div
-                class="flex items-center justify-between pt-6 border-t border-slate-100"
-              >
-                <div>
-                  <p class="text-xs text-slate-400 font-medium">Mulai dari</p>
-                  <p class="text-xl font-extrabold text-blue-900">
-                    Rp 450.000<span class="text-sm font-normal text-slate-500"
-                      >/hari</span
-                    >
-                  </p>
-                </div>
-                <button>
-                  <a
-                    href="https://wa.me/6285641612901?text=Halo%20saya%20ingin%20sewa%20mobil%20harian.%0A%0ATanggal:%20%0ALokasi:%20%0AJenis%20mobil:%20"
-                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
-                  >
-                    Booking WA
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Car Card 6 -->
-          <div
-            class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 card-hover transition-all duration-300"
-          >
-            <div class="h-56 bg-slate-200 relative overflow-hidden">
-              <img
-                src="inova.png"
+                src="image/inova.png"
                 alt="Toyota Innova"
                 class="w-full h-full object-cover"
               />
